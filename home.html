@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+
+        /*if nedded */
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <button class="hdbtn" id="backButton">
+                <i class="fi fi-sr-arrow-small-left"></i> Back
+            </button>
+            <h3 class="p-now">     My Music </h3>
+            <button class="hdbtn" id="menuButton">
+                <i class="fi fi-sr-list"></i>
+            </button>
+        </header>
+
+        <div class="player">
+            <div class="img-area">
+                <img id="musicImg" src="assets/image/images.png" alt="">
+            </div>
+
+            <div class="song-details">
+                <h1 class="name">SONG NAME</h1>
+                <h3 class="artist">ARTIST</h3>
+            </div>
+
+            <div class="audioC">
+                <div class="song-timer">
+                    <span class="current-time">0:00</span>
+                    <span class="max-duration">0:00</span>
+                </div>
+                <div class="progress-area">
+                    <div class="progress-bar"></div>
+                    <audio id="main-audio"></audio>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btnC" id="prev">
+                    <i class="fi fi-sr-rewind"></i>
+                </button>
+                <button class="play-pause btnC">
+                    <i class="fi fi-sr-play play"></i>
+                </button>
+                <button class="btnC" id="next">
+                    <i class="fi fi-sr-forward"></i>
+                </button>
+                <div class="file-upload">
+                    <input type="file" id="file-input" accept=".mp3" />
+                    <label for="file-input" class="file-btn">Choose File</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="playlistModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Playlist</h2>
+            <ul id="playlist"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+    <script>
+    </script>
+</body>
+
+</html>
