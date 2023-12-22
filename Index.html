@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="https://img.icons8.com/arcade/64/000000/experimental-music-arcade.png"  type="image/x-icon">
+</head>
+<body>
+  
+
+    <div class="container">
+     <!-- <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+      
+      <li><a href="#">profile</a></li>
+      <li><a href="#">playlist</a></li>
+      <li><a href="#">add music</a></li>
+      <li><a href="#">play list</a></li>
+    </ul>
+        <ul>
+
+      <li class="hideOnMobile"><a href="#">profile</a></li>
+      <li class="hideOnMobile"><a href="#">playlist</a></li>
+      <li class="hideOnMobile"><a href="#">add music</a></li>
+      <li class="hideOnMobile"><a href="#">play list</a></li>
+      <li class="menue-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+  -->
+        <h2 id="sn">Protidine</h2>
+        <h3 id="an">Zubeen,Papon</h3>
+        <div class="songposter">
+            <img src="zp.heic" alt="">
+        </div>
+        <audio class="audio" src="zp.mp3"></audio>
+
+        <div class="progress">
+           
+            <div class="pgbar">
+                <div class="pg"></div>
+            </div>
+            <div class="pg-meter">
+                <div class="currenttime">0:00</div>
+                <div class="duration">2:52</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <i class="fa-solid fa-backward" id="Prev" title="Previous"></i>
+            <i class="fa-solid fa-play main-button" id="Play" title="Play"></i>
+            <i class="fa-solid fa-forward" id="Next" title="Next"></i>
+        </div>
+    </div>
+  
+
+
+<script src="script.js"></script>
+</body>
+</html>
