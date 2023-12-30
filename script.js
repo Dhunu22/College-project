@@ -11,7 +11,7 @@ let body = document.querySelector("body");
 let Current_time = document.querySelector(".currenttime");
 let Tduration = document.querySelector(".duration");
 
-//Stosing music and its info in array
+
 
 let index = 0;
 let songs = [
@@ -169,7 +169,6 @@ let songs = [
   },
 ];
 
-//play functionality
 
 let isplaying = false;
 const playmusic = () => {
@@ -178,7 +177,7 @@ const playmusic = () => {
   playbtn.classList.replace("fa-play", "fa-pause");
 };
 
-//pause functionality
+
 
 const pausemusic = () => {
   isplaying = false;
@@ -190,7 +189,7 @@ playbtn.addEventListener("click", () => {
   isplaying == false ? playmusic() : pausemusic();
 });
 
-// loading song onclick via their index
+
 
 const loadsong = (songs) => {
   Songname.textContent = songs.Songname;
@@ -199,7 +198,7 @@ const loadsong = (songs) => {
   songimg.src = songs.songimg;
 };
 
-// Generating Random Gradient background on next or previous click
+
 const createHex = () => {
   var hexCode1 = "";
   var hexValues1 = "0dc1c9";
@@ -226,7 +225,7 @@ const RandomGradientgenerate = () => {
   document.body.style.background = gradient;
 };
 
-// next song onclick
+
 
 nextplay.addEventListener(
   "click",
@@ -238,7 +237,7 @@ nextplay.addEventListener(
   })
 );
 
-// Previous song onclick
+
 
 prevplay.addEventListener("click", () => {
   index = (index - 1 + songs.length) % songs.length;
@@ -247,16 +246,15 @@ prevplay.addEventListener("click", () => {
   RandomGradientgenerate();
 });
 
-// syncing progress bar and current time and duration
 
 music.addEventListener("timeupdate", (event) => {
   let { currentTime, duration } = event.srcElement;
 
-  //syncing progress bar and current time
+ 
   let songTime = (currentTime / duration) * 100;
   progressbar.style.width = `${songTime}%`;
 
-  //current time of song
+ 
   let cmin = Math.floor(currentTime / 60);
   let csec = Math.floor(currentTime % 60);
   
@@ -264,7 +262,7 @@ music.addEventListener("timeupdate", (event) => {
     Current_time.textContent = `${cmin}:${csec}`;
   }
 
-  ////Total duration time of song
+ 
   let dmin = Math.floor(duration / 60);
   let dsec = Math.floor(duration % 60);
   if (duration) {
@@ -272,7 +270,6 @@ music.addEventListener("timeupdate", (event) => {
   }
 });
 
-// controlling progressbar and at and any instance of music
 
 pbar.addEventListener("click", (event) => {
   let { duration } = music;
@@ -280,13 +277,5 @@ pbar.addEventListener("click", (event) => {
   music.currentTime = pgbarmove;
 });
 
-//Automatic next music after completion of current music
-/*function showSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display='flex'
-}
-function hideSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display='none'
-}*/
+
 music.addEventListener("ended", nextsong);
